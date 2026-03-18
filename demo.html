@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Đơn Giản</title>
+    <style>
+        /* CSS - Lớp áo của ứng dụng */
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; background: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 350px; }
+        h2 { text-align: center; color: #333; }
+        .input-group { display: flex; gap: 5px; }
+        input { flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        button#add-btn { padding: 8px 15px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        
+        ul { list-style: none; padding: 0; margin-top: 20px; }
+        li { 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px; border-bottom: 1px solid #eee; transition: 0.2s;
+        }
+        li:hover { background: #fafafa; }
+        .task-text { cursor: pointer; flex: 1; }
+        .completed { text-decoration: line-through; color: #888; }
+        .delete-btn { color: #ff4d4d; border: none; background: none; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>My To-Do List</h2>
+    <div class="input-group">
+        <input type="text" id="task-input" placeholder="Nhập công việc mới...">
+        <button id="add-btn">Thêm</button>
+    </div>
+    <ul id="task-list">
+        </ul>
+</div>
+
+<script>
+    // JS - Linh hồn của ứng dụng
+    const input = document.getElementById('task-input');
+    const addBtn = document.getElementById('add-btn');
+    const taskList = document.getElementById('task-list');
+
+    // Hàm thêm công việc
+    function addTask() {
+        const text = input.value.trim();
+        if (text === "") return; // Không cho nhập rỗng
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span class="task-text">${text}</span>
+            <button class="delete-btn">Xóa</button>
+        `;
+
+        // Click vào chữ để gạch ngang (Xong)
+        li.querySelector('.task-text').addEventListener('click', function() {
+            this.classList.toggle('completed');
+        });
+
+        // Click vào nút Xóa
+        li.querySelector('.delete-btn').addEventListener('click', function() {
+            li.remove();
+        });
+
+        taskList.appendChild(li);
+        input.value = ""; // Xóa ô input sau khi thêm
+    }
+
+    // Sự kiện Click nút
+    addBtn.addEventListener('click', addTask);
+
+    // Sự kiện nhấn phím Enter
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') addTask();
+    });
+</script>
+
+</body>
+</html>
