@@ -19,7 +19,7 @@ The project is built with a focus on scalability and modern web standards:
 * **PostgreSQL:** Advanced relational database to ensure data integrity and robust management.
 
 ### 3. Development Tools
-* **Git & GitHub:** Version control and source code collaboration.
+* **Git & GitHub:** Version control and source code collaboration. (in progress)
 * **Linux & Docker:** Optimized development environment and consistent application containerization.
 
 ---
