@@ -10,8 +10,8 @@
 The project is built with a focus on scalability and modern web standards:
 
 ### 1. Frontend (User Interface)
-* **HTML5 & CSS3:** Semantic structure and minimalist design.
-* **TypeScript:** Ensuring type safety and reducing runtime logic errors.
+* **HTML5 & CSS3:** Semantic structure and minimalist design. (In progress)
+* **TypeScript:** Ensuring type safety and reducing runtime logic errors. (In progress)
 * **Tailwind CSS:** Utility-first CSS framework for rapid and responsive UI development.
 
 ### 2. Backend & Database (Server-side)
@@ -19,7 +19,7 @@ The project is built with a focus on scalability and modern web standards:
 * **PostgreSQL:** Advanced relational database to ensure data integrity and robust management.
 
 ### 3. Development Tools
-* **Git & GitHub:** Version control and source code collaboration. (in progress)
+* **Git & GitHub:** Version control and source code collaboration. (In progress)
 * **Linux & Docker:** Optimized development environment and consistent application containerization.
 
 ---
