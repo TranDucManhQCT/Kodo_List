@@ -20,7 +20,7 @@ The project is built with a focus on scalability and modern web standards:
 
 ### 3. Development Tools
 * **Git & GitHub:** Version control and source code collaboration. (In progress)
-* **Linux & Docker:** Optimized development environment and consistent application containerization.
+* **Linux & Docker:** Optimized development environment and consistent application containerization. (In progress)
 
 ---
 ## 📂 Project Structure
